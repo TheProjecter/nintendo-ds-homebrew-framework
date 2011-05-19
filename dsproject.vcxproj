@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\Headers\AIPlayer.h" />
+    <ClInclude Include="source\Headers\AnimateSprite.h" />
+    <ClInclude Include="source\Headers\BackgroundTypes.h" />
+    <ClInclude Include="source\Headers\ChooseCourtState.h" />
+    <ClInclude Include="source\Headers\EGameObjectStates.h" />
+    <ClInclude Include="source\Headers\Fixed.h" />
+    <ClInclude Include="source\Headers\IBackground.h" />
+    <ClInclude Include="source\Headers\Ball.h" />
+    <ClInclude Include="source\Headers\BMPTexture.h" />
+    <ClInclude Include="source\Headers\CollisionDetection.h" />
+    <ClInclude Include="source\Headers\DisplayList.h" />
+    <ClInclude Include="source\Headers\DSGraphicsRenderer.h" />
+    <ClInclude Include="source\Headers\DSMD2.h" />
+    <ClInclude Include="source\Headers\EventHandler.h" />
+    <ClInclude Include="source\Headers\Factory.h" />
+    <ClInclude Include="source\Headers\File.h" />
+    <ClInclude Include="source\Headers\Game.h" />
+    <ClInclude Include="source\Headers\GameObject.h" />
+    <ClInclude Include="source\Headers\GameObjectFactory.h" />
+    <ClInclude Include="source\Headers\GameState.h" />
+    <ClInclude Include="source\Headers\GLGraphicsRenderer.h" />
+    <ClInclude Include="source\Headers\GraphicsRenderer.h" />
+    <ClInclude Include="source\Headers\HelperFunctions.h" />
+    <ClInclude Include="source\Headers\IMesh.h" />
+    <ClInclude Include="source\Headers\ITexture.h" />
+    <ClInclude Include="source\Headers\MeshFactory.h" />
+    <ClInclude Include="source\Headers\MeshObject.h" />
+    <ClInclude Include="source\Headers\PCXTexture.h" />
+    <ClInclude Include="source\Headers\Player.h" />
+    <ClInclude Include="source\Headers\PlayState.h" />
+    <ClInclude Include="source\Headers\ResourceManager.h" />
+    <ClInclude Include="source\Headers\Singleton.h" />
+    <ClInclude Include="source\Headers\SkyBox.h" />
+    <ClInclude Include="source\Headers\Sprite.h" />
+    <ClInclude Include="source\Headers\StartMenuState.h" />
+    <ClInclude Include="source\Headers\TextureFactory.h" />
+    <ClInclude Include="source\Headers\Vec2.h" />
+    <ClInclude Include="source\Headers\Vec3.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="source\Source\AIPlayer.cpp" />
+    <ClCompile Include="source\Source\AnimatedSprite.cpp" />
+    <ClCompile Include="source\Source\BackgroundTypes.cpp" />
+    <ClCompile Include="source\Source\Ball.cpp" />
+    <ClCompile Include="source\Source\BMPTexture.cpp" />
+    <ClCompile Include="source\Source\ChooseCourtState.cpp" />
+    <ClCompile Include="source\Source\DisplayList.cpp" />
+    <ClCompile Include="source\Source\DSGraphicsRenderer.cpp" />
+    <ClCompile Include="source\Source\DSMD2.cpp" />
+    <ClCompile Include="source\Source\EventHandler.cpp" />
+    <ClCompile Include="source\Source\File.cpp" />
+    <ClCompile Include="source\Source\Game.cpp" />
+    <ClCompile Include="source\Source\GLGraphicsRenderer.cpp" />
+    <ClCompile Include="source\Source\main.cpp" />
+    <ClCompile Include="source\Source\MeshObject.cpp" />
+    <ClCompile Include="source\Source\PCXTexture.cpp" />
+    <ClCompile Include="source\Source\Player.cpp" />
+    <ClCompile Include="source\Source\PlayState.cpp" />
+    <ClCompile Include="source\Source\ResourceManager.cpp" />
+    <ClCompile Include="source\Source\SkyBox.cpp" />
+    <ClCompile Include="source\Source\Sprite.cpp" />
+    <ClCompile Include="source\Source\StartMenuState.cpp" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <NMakeBuildCommandLine>make -r 2&gt;&amp;1 | sed -e ‘s/(.[a-zA-Z]+):([0-9]+):/1(2):/’</NMakeBuildCommandLine>
+    <NMakeOutput>dsproject.nds</NMakeOutput>
+    <NMakeCleanCommandLine>make clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>make -r 2&gt;&amp;1 | sed -e ‘s/(.[a-zA-Z]+):([0-9]+):/1(2):/’</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;_DEBUG;DSDEV;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>C:\devkitPro\devkitARM\include;C:\devkitPro\libnds\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <NMakeBuildCommandLine>make -r 2&gt;&amp;1 | sed -e ‘s/(.[a-zA-Z]+):([0-9]+):/1(2):/’</NMakeBuildCommandLine>
+    <NMakeOutput>dsproject.nds</NMakeOutput>
+    <NMakeCleanCommandLine>make clean</NMakeCleanCommandLine>
+    <NMakeReBuildCommandLine>make -r 2&gt;&amp;1 | sed -e ‘s/(.[a-zA-Z]+):([0-9]+):/1(2):/’</NMakeReBuildCommandLine>
+    <NMakePreprocessorDefinitions>WIN32;NDEBUG;DSDEV;$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath>C:\devkitPro\devkitARM\include;C:\devkitPro\libnds\include;$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
